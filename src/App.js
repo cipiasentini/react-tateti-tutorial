@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
 function Square(props) {
@@ -9,7 +9,7 @@ function Square(props) {
     );
 }
 
-class Board extends Component {
+class Board extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -34,7 +34,7 @@ class Board extends Component {
         return (
             <Square
                 value={this.state.squares[i]}
-                onclick={() => this.handleClick(i)}
+                onClick={() => this.handleClick(i)}
             />
         );
     }
@@ -71,7 +71,7 @@ class Board extends Component {
     }
 }
 
-class Game extends Component {
+class Game extends React.Component {
     render() {
         return (
             <div className="game">
